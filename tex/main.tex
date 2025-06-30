@@ -1,0 +1,86 @@
+\documentclass[12pt, a4paper]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{titlesec}
+\usepackage[acronym]{glossaries} % 'nonumberlist' hides page numbers from glossary
+\usepackage[style=numeric, sorting=none, backend=biber, backref=true]{biblatex}
+
+% --- Setup Commands ---
+\addbibresource{bib/references.bib}
+
+\hypersetup{
+    plainpages=false,
+    bookmarks=true,
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=teal,
+    filecolor=magenta,
+    urlcolor=cyan
+}
+
+% --- Custom Header/Footer Setup ---
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyhead[LE,RO]{\thepage} % Page number on Left-Even, Right-Odd (outer edge)
+\fancyhead[RE]{\leftmark}   % Chapter name on Right-Even
+\fancyhead[LO]{\rightmark}  % Section name on Left-Odd
+\fancyfoot[LE,RO]{\textit{Wastewater Treatment in WSPs}} % Book title on outer edge
+
+% --- Glossary & Acronym Definitions ---
+\makeglossaries
+
+\newacronym{asps}{ASPs}{Activated Sludge Plants}
+\newglossaryentry{nitrification}{
+    name={nitrification},
+    description={The biological oxidation of ammonia to nitrite followed by the oxidation of the nitrite to nitrate}
+}
+
+% --- Title Page Info ---
+\title{\Huge\textbf{Wastewater Treatment in WSPs} \\
+\large A Technical and Analytical Perspective \\
+\vspace{2em} \normalsize\textbf{Author: Kevin Ngigi} \\
+\today}
+\author{} % Keep empty to not display on title
+\date{}   % Keep empty to not display on title
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\cleardoublepage
+\null\vfill\begin{center}\textit{This page is intentionally left blank.}\end{center}\vfill
+\cleardoublepage
+
+\frontmatter
+
+\chapter*{Preface}
+This work is the culmination...
+
+\chapter*{Foreword}
+Wastewater treatment remains...
+
+\tableofcontents
+\cleardoublepage
+
+\mainmatter
+
+\input{chapters/introduction.tex}
+\input{chapters/nitrogen.tex}
+
+\backmatter
+
+\printglossary[type=\acronymtype, title={List of Acronyms}]
+\printglossary[title={Glossary}]
+\printbibliography[title={References}]
+
+
+\end{document}
