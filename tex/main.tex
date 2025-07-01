@@ -1,18 +1,19 @@
-\documentclass[12pt, a4paper]{book}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[margin=1in]{geometry}
-\usepackage{fancyhdr}
-\usepackage{graphicx}
-\usepackage{amsmath, amssymb}
-\usepackage{xcolor}
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{caption}
-\usepackage{titlesec}
-\usepackage[acronym]{glossaries} % 'nonumberlist' hides page numbers from glossary
-\usepackage[style=numeric, sorting=none, backend=biber, backref=true]{biblatex}
+\documentclass[12pt, a4paper]{book} 
+\usepackage[utf8]{inputenc} % Allows input of special characters directly (e.g., é, ñ) using UTF-8 encoding.
+\usepackage[T1]{fontenc}    % Ensures better font encoding (e.g., better handling of accented characters in output).
+\usepackage{lmodern}    % Loads Latin Modern fonts, which are scalable and look better in print/PDF.
+\usepackage[margin=1in]{geometry}   % Sets 1-inch margins on all sides of the page for better readability.
+\usepackage{fancyhdr}   % Enables custom headers and footers throughout the document.
+\usepackage{graphicx}   % Allows you to include and manipulate images with \includegraphics.
+\usepackage{amsmath, amssymb}   % Provides advanced mathematical typesetting (symbols, equations, etc.).
+\usepackage{xcolor}    % Lets you define and use colors in text, tables, links, etc.
+\usepackage{url}       % Formats URLs nicely (line breaks, font choice), especially in bibliographies.
+\usepackage{hyperref}   % Adds clickable hyperlinks to references, URLs, table of contents, etc.
+\usepackage{csquotes}   % Provides context-sensitive quotation marks and allows for easy quoting of text.
+\usepackage{caption}    % Customizes the appearance and behavior of figure and table captions.
+\usepackage{titlesec}   % Allows custom formatting of section and chapter titles (fonts, spacing, etc.).
+\usepackage[acronym]{glossaries}    % Enables the creation of glossaries and acronyms. 
+\usepackage[style=numeric, sorting=none, backend=biber, backref=true]{biblatex} % Sets up the bibliography:
 
 % --- Setup Commands ---
 \addbibresource{bib/references.bib}
@@ -20,25 +21,27 @@
 \hypersetup{
     plainpages=false,
     bookmarks=true,
-    colorlinks=true,
-    linkcolor=blue,
-    citecolor=teal,
-    filecolor=magenta,
-    urlcolor=cyan
+    colorlinks=true,      % Enable colored text links instead of boxes
+    linkcolor=blue,       % Color for links to internal documents (sections, etc.)
+    citecolor=teal,       % Color for citations
+    filecolor=magenta,    % Color for file links
+    urlcolor=cyan         % Color for external URLs
 }
 
 % --- Custom Header/Footer Setup ---
 \pagestyle{fancy}
-\fancyhf{} % Clear all header and footer fields
+\fancyhf{}  % Clear all header and footer fields
 \fancyhead[LE,RO]{\thepage} % Page number on Left-Even, Right-Odd (outer edge)
 \fancyhead[RE]{\leftmark}   % Chapter name on Right-Even
 \fancyhead[LO]{\rightmark}  % Section name on Left-Odd
-\fancyfoot[LE,RO]{\textit{Wastewater Treatment in WSPs}} % Book title on outer edge
+\fancyfoot[LE,RO]{\textit{Wastewater Treatment in WSPs}}    % Book title on outer edge
 
 % --- Glossary & Acronym Definitions ---
 \makeglossaries
 
 \newacronym{asps}{ASPs}{Activated Sludge Plants}
+\newacronym{wwtp}{WWTP}{Wastewater Treatment Plant}
+\newacronym{wsp}{WSPs}{Waste Stabilization Ponds}
 \newglossaryentry{nitrification}{
     name={nitrification},
     description={The biological oxidation of ammonia to nitrite followed by the oxidation of the nitrite to nitrate}
@@ -49,16 +52,16 @@
 \large A Technical and Analytical Perspective \\
 \vspace{2em} \normalsize\textbf{Author: Kevin Ngigi} \\
 \today}
-\author{} % Keep empty to not display on title
-\date{}   % Keep empty to not display on title
+\author{}
+\date{}
 
 \begin{document}
 
 \maketitle
 \thispagestyle{empty}
-\cleardoublepage
+\clearpage
 \null\vfill\begin{center}\textit{This page is intentionally left blank.}\end{center}\vfill
-\cleardoublepage
+\clearpage
 
 \frontmatter
 
@@ -69,7 +72,7 @@ This work is the culmination...
 Wastewater treatment remains...
 
 \tableofcontents
-\cleardoublepage
+\clearpage
 
 \mainmatter
 
