@@ -37,6 +37,6 @@ You'll need a LaTeX distribution (like [TeX Live](https://www.tug.org/texlive/))
 ```bash
 cd tex  # the directory with the tex files
 pdflatex main.tex && biber main && makeglossaries main && pdflatex main.tex && pdflatex main.tex  # creates the complete pdf with all the expected bells and whistles
-rm *.aux *.log *.out *.toc *.bcf *.blg *.bbl *.xml *.glo *.gls *.glg  # removes all the unnecessary files generated from the pdf creation. This is useful for debugging too.
+rm *.aux *.log *.out *.toc *.bcf *.blg *.bbl *.xml *.glo *.gls *.glg *.ist *.alg *.acr *.acn *.glsdefs  # removes all the unnecessary files generated from the pdf creation. This is useful for debugging too.
 ```
 
