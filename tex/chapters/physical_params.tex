@@ -1,0 +1,146 @@
+\chapter{Physical Parameters}
+yada yada yada...
+
+\section{pH}
+When in school, we were taught that pH refers to the alkalinity or acidity of a solution\cite{IUPAC+S05746+2025} and this was good enough for us at the time but now that we need to know more information about this so that we can work better in its application, we will have to now go a little deeper on this matter.
+
+First, we ought to remember that acidic solutions, thich have a higher amount of \ce{H+} cations are measured to have lower pH values for example; we will say that hydrochloric acid in the stomach ranges between 1.5 and 3.5 and this indicates a highly acidic solution
+
+Pure water, which is purified water that has been processed to remove all impurities it contains, has a normal pH of 7 at \gls{stp} and normal drinking water is recommended to be at a range of \(6.5\,-\,9.5\)
+
+On the other end of the pH scale, the pH of human saliva can range from \(6.2\,-\,7.6\) and this places it to slightly acidic to slightly alkaline, of course deending on various factors. At the same time, \(6.5\,-\,7.5\) is the range that most domestic wastewater lies at, and with this idea in mind, we now can move on to an in-depth interrogation of pH.
+
+I wish to mention that th measurement of pH is \textbf{lagarithmic} and not \textbf{linear} and this means that each \texttt{whole number} change in value indicates a tenfold increase in the hydrogen ion concentration. This means that if I have a solution that has a pH of 4.0, it will have a concentration of 10\textsuperscript{-4} ions and if we are to make the solution more acidic to a pH of 2, it will then have a concentration of 10\textsuperscript{-2} ions, which means that we will have a 100X increase in concentration.
+
+\subsection{The Hydrogen Ion Concentration}
+The Hydrogen Ion Concentration is the way we are going to best discuss pH to glean more information about it. This is the logarithm of the reciprocal of the hydrogen ion concentration in gram moles per liter. Thus, in a neutral solution the hydrogen ion (\ce{H+}) and the hydroxyl ion (\ce{OH-}) concentrations are equal, and each is equal to $10^{-7}$.
+
+The above text simply means that 
+
+
+\subsubsection{Calculating Hydrogen Ion Concentration from pH}
+Calculating the concentration of Hydrogen ions will be of use to people working in the wastewater treatment plant facilities since we are the ones who are responsible for ensuring treatment is stable and efficient. We have many ways we can use pH to learn more about our systems such as in natural treatment systems, bacterial processes such as \gls{nitrification} are pH-dependent and this might help indicate microbial stresses.
+
+
+\subsubsection*{Deriving \(\ce{[H^+ ]}\) from pH}
+The definition of pH is:
+
+\begin{equation}
+\mathrm{pH} = -\log_{10}\left[\ce{H+}\right]
+\end{equation}
+
+where \([\ce{H+}]\) is the hydrogen ion concentration in mol/L.
+
+To solve for \([\ce{H+}]\), we first multiply both sides by \(-1\) to remove the negative in the \( \log \):
+
+\begin{equation}
+-\,\mathrm{pH} = \log_{10} \left[\ce{H+}\right]
+\end{equation}
+
+In mathematics, there is a fundamental property of logarithms called the \textbf{The exponential form of logarithms} and in this form, it is stated that \cite{openstax_log_properties}:
+
+\[
+\log_a b = c \quad \text{implies} \quad b = a^c
+\]
+
+and therefore:
+
+\[
+\log_10 \left[\ce{H+}\right] = -\,\mathrm{pH} \quad \text{implies} \left[\ce{H+}\right] = 10^{-\mathrm{pH}}
+\]
+
+Which now makes our final expression to be:
+
+\begin{equation}
+\left[\ce{H+}\right] = 10^{-\mathrm{pH}}
+\end{equation}
+
+
+\paragraph*{Examples of \([\ce{H+}]\) from pH}
+
+\begin{enumerate}
+  \item Neutral water (\(\mathrm{pH}=7\)):
+  \[
+    [\ce{H+}] = 10^{-7} = \SI{1e-7}{mol/L}
+  \]
+  
+  \item Raw inlet wastewater (\(\mathrm{pH}=8.29\)):
+  \[
+    [\ce{H+}] = 10^{-8.29} \approx \SI{5.13e-9}{mol/L}
+  \]
+  
+  \item Treated effluent (\(\mathrm{pH}=8.37\)):
+  \[
+    [\ce{H+}] = 10^{-8.37} \approx \SI{4.27e-9}{mol/L}
+  \]
+\end{enumerate}
+
+\subsubsection{Clarifying Mole business}
+This is all nice and smooth, but it still raises a question to those that forgot their chemistry lessons;
+
+What exactly is a mole?
+
+This sounds ludicrous at first, but its implication is that without proper understanding, we will all get turned into parrots who simply echo words and numbers but have no knowledge on what they actually mean or signify and without meaning, understanding will fail to bear any fruits.
+
+So, historically, a \textbf{mole} was defined with respect to 12 g of carbon-12 \cite{lumenlearning_mole_old} and was written as:
+
+\[
+1\ \text{mol of } \ce{^{12}C} = \SI{12}{g}
+\]
+
+
+But the old way was not consistent and needed to get changed and that is why since 2019, the \gls{IUPAC} changed the formal definition into this:
+
+\begin{quote}
+    \enquote{The mole, symbol \textit{mol}, is the SI unit of amount of substance. One mole contains exactly \num{6.02214076e23} elementary entities. This number is the fixed numerical value of the \gls{avogadroconstant}, \( N_\mathrm{A} \), when expressed in \si{mol^{-1}}, and is called the Avogadro number.} \cite{iupac_mole_new}
+\end{quote}
+
+and the formal formula of defining it now is:
+
+\begin{equation}
+1\ \mathrm{mol} = \num{6.02214076e23} \text{elementary entities}
+\end{equation}
+
+
+So, going back into our (\(\mathrm{pH}\)) values derived, we can see that we had an example of:
+
+Treated effluent (\(\mathrm{pH}=8.37\)):
+  \[
+    [\ce{H+}] = 10^{-8.37} = \SI{4.27e-9}{mol/L}
+  \]
+
+and we had the challenge of understanding what the mol/L actually meant and I think that the best solution to this question is to convert this value into something that most people have worked with; grams per litre.
+
+This will give everyone the exact numbers required to grasp the magnitude of the values. For the conversion into g/L to work, we will need to use the molar mass of the hydrogen ion. One \(\ce{H+}\) ion has a molar mass of approximately
+
+\[
+M(\ce{H+}) = \SI{1.00794}{\gram\per\mole},
+\]
+
+and since
+
+\[
+[\ce{H+}] = 10^{-8.37} = \SI{4.27e-9}{\mol\per\liter},
+\]
+
+converting this into grams per liter gives:
+
+\[
+[\ce{H+}]_{\text{(g/L)}} = 
+4.27 \times 10^{-9}\,\frac{\mathrm{mol}}{\mathrm{L}} \times
+1.00794\,\frac{\mathrm{g}}{\mathrm{mol}}
+ \approx 4.30 \times 10^{-9}\,\frac{\mathrm{g}}{\mathrm{L}}
+\]
+
+This value tells us just how tiny an amount of \ce{H+} ions we are really working with, which in turn tells us the sensitivity that pH changes can have. I should also remind you that pH is logarithmic and each whole number change in pH means a massive change in the number of ions in the sample.
+
+\subsection{Why pH matters in wastewater}
+Now that we have gone through the basics of what pH is and how to convert it into various units, the next question is going to be; what are we supposed to do with that information, is it THAT important to us, what information can we glean from a pH value?
+
+To answer this question, we must first start with discussing the effects of pH on \gls{livingsystems} first, then we'll continue on to chemical interractions and how they are influenced by pH.
+
+\subsubsection{Cells and pH}
+
+Living things are composed of cells, and cells are the the fundamental building blocks of life and if we understand what pH does to cells, we will have a better understanding of how it affects living things and how that, in effect, affects treatment of wastewater.
+
+Animal Cells are
